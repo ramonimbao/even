@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+
+{% block js %}
+<script src="/js/yall.min.js"></script>
+{% endblock js %}
+
+{% block content %}
+<div class="about">
+    {{ page.content | safe }}
+
+
+    {% for asset in page.assets %}
+    
+        <img class="lazy" src="{{ get_url(path=asset) }}">
+    
+    {% endfor %}
+
+
+
+
+<!-- Disqus -->
+<div id='disqus_thread'></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        yall({
+            observeChanges: true
+        });
+    });
+</script>
+<script>
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ramonimbao.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments
+        powered by Disqus.</a></noscript>
+
+        </div>
+{% endblock content %}
