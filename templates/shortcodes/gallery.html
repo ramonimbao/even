@@ -1,5 +1,0 @@
-{% for asset in page.assets %}
-    {% if asset is ending_with(".jpg") %}
-        <img class="lazy" data-src="{{ get_url(path=asset) }}">
-    {% endif %}
-{% endfor %}
