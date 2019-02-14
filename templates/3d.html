@@ -4,25 +4,8 @@
 <div class="about">
     {{ page.content | safe }}
 
-
-    {% for asset in page.assets %}
-    
-        <img class="lazy" src="{{ get_url(path=asset) }}">
-    
-    {% endfor %}
-
-
-
-
 <!-- Disqus -->
 <div id='disqus_thread'></div>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        yall({
-            observeChanges: true
-        });
-    });
-</script>
 <script>
     (function () {
         var d = document, s = d.createElement('script');
