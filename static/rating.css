@@ -28,6 +28,7 @@
 main .about .rating-table th, main .about .rating-table td, main .post .rating-table th, main .post .rating-table td {
   border: 1px;
   box-shadow: none;
+  min-width: 100%;
 }
 
 .rating-table {
