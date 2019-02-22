@@ -25,11 +25,16 @@
   z-index: 0;
 }
 
-main .about table th, main .about table td, main .post table th, main .post table td .rating-table {
-  border: 0;
+main .about .rating-table th, main .about .rating-table td, main .post .rating-table th, main .post .rating-table td {
+  border: 1px;
+  box-shadow: none;
 }
 
 .rating-table {
-  box-shadow: none;
   padding-bottom: 20px;
+  box-shadow: none;
+}
+
+main .about .rating-table tr:hover {
+  background-color: #fefefe;
 }
