@@ -1,21 +1,15 @@
 {% extends "index.html" %}
-
 {% block content %}
 <div class="about">
+
     {{ page.content | safe }}
+    <!-- Disqus -->
+    <div id='disqus_thread'></div>
+    <script src="/js/lazy.js"></script>
+    <script src="/js/ratings.js"></script>
+    <script src="/js/disqus.js"></script>
+    <noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments
+            powered by Disqus.</a></noscript>
 
-<!-- Disqus -->
-<div id='disqus_thread'></div>
-<script>
-    (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://ramonimbao.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments
-        powered by Disqus.</a></noscript>
-
-        </div>
+</div>
 {% endblock content %}
